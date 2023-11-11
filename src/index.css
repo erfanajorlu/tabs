@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root{
+    --transition: all 0.3s linear;  
+}
+
+.btn{
+    text-transform: uppercase;
+    -webkit-transition: var(--transition);
+    transition: var(--transition);
+}

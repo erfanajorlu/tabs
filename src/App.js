@@ -26,12 +26,35 @@ function App() {
     );
   }
   const { company, dates, duties, title } = jobs[value];
-  return <section className="flex w-full min-h-screen justify-center items-center">
-    <div className="flex flex-col  items-center">
-      <h1 className="text-4xl font-extrabold m-4">Experience</h1>
-      <div className="w-20 h-1 bg-teal-600"></div>
-    </div>
-  </section>;
+  return (
+    <section className="flex flex-col w-full min-h-screen justify-center items-center">
+      <div className="flex flex-col  items-center">
+        <h1 className="text-4xl font-extrabold m-4">Experience</h1>
+        <div className="w-20 h-1 bg-teal-600"></div>
+      </div>
+      <div className="flex justify-between items-center">
+        {/* btn container */}
+        <div>
+          {jobs.map((item, index) => {
+            return (
+              <button
+                className={`flex btn flex-col justify-center m-6 items-center pl-6  ml-6 transform text-2xl hover:text-teal-600 ${
+                  index === value && "text-teal-600 border-l-4 border-teal-600"
+                }`}
+                onClick={() => {
+                  setValue(index);
+                }}
+                key={index}
+              >
+                {item.company}
+              </button>
+            );
+          })}
+        </div>
+        {/* job info */}
+      </div>
+    </section>
+  );
 }
 
 export default App;
