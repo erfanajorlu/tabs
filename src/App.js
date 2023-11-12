@@ -67,8 +67,11 @@ function App() {
           })}
         </article>
       </div>
+      <button className="w-48 text-center h-8 text-white font-semibold text-md rounded-lg hover:bg-white hover:text-teal-600 btn uppercase bg-teal-600">
+        more info
+      </button>
     </section>
-  );
+  ); 
 }
 
 export default App;
